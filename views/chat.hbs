@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/assets/messages.css" />
+    <link rel="stylesheet" href="/public/assets/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Alexgram</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container-fluid header-container">
+        <div class="header-container-logo">Alexgram</div>
+        <div class="header-container-icons">
+          <div class="header__container__icon icon"></div>
+          <div class="header__container__icon">
+            <a href="https://github.com/coodingalex">
+              <img src="/public/assets/images/github.png" class="icon" alt="" />
+            </a>
+          </div>
+          <div class="header__container__icon icon logout">
+            <a href="/logout"
+              ><img
+                src="/public/assets/images/logout.png"
+                class="icon logout"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <div class="chat" chatId="{{ chat }}">
+      <div class="chat-container">
+        <div class="back__icon">
+          <a href="/chats" class="back__icon__container">
+            <img src="/public/assets/images/back.png" class="icon" alt="back" />
+          </a>
+        </div>
+        <div class="messages">
+          <div class="messages-container">
+            {{#each messages}}
+            <div class="message">
+              <div class="message-container">
+                <p>
+                  <strong>{{ this.user }}</strong
+                  >: {{ this.value }}
+                </p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="message"
+                id="message__input"
+              />
+            </div>
+            <div class="col">
+              <button class="btn btn-primary" id="send__message__button">
+                enviar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="users__container">
+          <div class="users__title">
+            <span class="">Users</span>
+          </div>
+          <ul class="list-group users__list">
+            
+            {{#each users}}
+            <div class="list__item__container" id={{this}}>
+              <div class="delete__button" href="" onclick="deleteUser('{{this}}')">
+                <img src="/public/assets/images/delete.png" class="delete__icon" alt="">
+              </div>
+            <li
+              class="list-group-item disabled user__item"
+              user={{this}}
+              aria-disabled="true"
+            >
+              {{this}}
+            </li>
+            </div>
+            {{/each}}
+          </ul>
+          <div class="add__icon__container">
+            <a href="" id="add__user">
+              <img
+                src="/public/assets/images/add.png"
+                class="add__icon"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="/public/js/chat.js"></script>
+  </body>
+</html>

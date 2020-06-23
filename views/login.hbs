@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/assets/global.css" />
+
+    <link rel="stylesheet" href="/public/assets/login.css" />
+    <title>Alexgram</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header">
+      <div class="container-fluid header-container">
+        <div class="header-container-logo">Alexgram</div>
+        <div class="header-container-icons">
+          <div class="header__container__icon icon"></div>
+          <div class="header__container__icon icon"></div>
+          <div class="header__container__icon">
+            <a href="https://github.com/coodingalex">
+              <img src="/public/assets/images/github.png" class="icon" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <div class="login">
+      <div class="login__container">
+        <form class="needs-validation login__form" novalidate id="login__form">
+          <div class="form-group login__form__container">
+            <span class="username__validation">a</span>
+            <input
+              type="text"
+              class="form-control login__input"
+              id="username"
+              name="username"
+              placeholder="username"
+            />
+          </div>
+          <div class="form-group login__form__container">
+            <span class="password__validation">a</span>
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input
+              type="password"
+              class="form-control login__input"
+              id="password"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+          <div class="login__button__container">
+            <button type="submit" class="btn btn-primary login__button">
+              Log-in
+            </button>
+          </div>
+        </form>
+        <div class="sign-up">
+          <div class="sign-up__container">
+            <p>no accont? sign-up now!</p>
+            <button class="btn btn-primary sign-up__button">
+              sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/public/js/login.js"></script>
+  </body>
+</html>

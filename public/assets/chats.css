@@ -1,0 +1,26 @@
+/* app */
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* chats */
+
+.chats-container {
+  margin: 50px 50px;
+}
+.chat {
+  width: 250px;
+  height: 50px;
+  margin: 10px 0;
+  border-top: #c8c8c8c0 solid 1px;
+}
+
+.chat-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-weight: bolder;
+}

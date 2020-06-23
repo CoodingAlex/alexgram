@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/public/assets/chats.css" />
+  <link rel="stylesheet" href="/public/assets/global.css">
+    <title>Alexgram</title>
+  </head>
+  <body>
+ <!-- header -->
+    <div class="header">
+      <div class="container-fluid header-container">
+        <div class="header-container-logo">Alexgram</div>
+        <div class="header-container-icons">
+          <div class="header__container__icon icon"></div>
+          <div class="header__container__icon">
+            <a href="https://github.com/coodingalex">
+              <img src="/public/assets/images/github.png" class="icon" alt="" />
+            </a>
+          </div>
+          <div class="header__container__icon icon logout">
+            <a href="/logout"
+              ><img
+                src="/public/assets/images/logout.png"
+                class="icon logout"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <!-- app -->
+    <div class="app">
+      <div class="app-container">
+        <div class="chats">
+          <div class="chats-container">
+            {{#each chats}}
+            <div chatId={{this.chat}} class="chat">
+              <a  href="/chats/{{this.chat}}" class="chat-container">
+                <div class="chat-title">
+                  {{ this.name }}
+                </div>
+              </a>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- app -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/public/js/chats.js"></script>
+  </body>
+</html>

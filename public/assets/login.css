@@ -1,0 +1,61 @@
+.login {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  align-items: center;
+}
+.login__container {
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.login__input {
+  width: 100%;
+}
+.login__form {
+  width: 100%;
+}
+.login__form__container {
+  width: 100%;
+}
+.login__button__container {
+  display: flex;
+  justify-content: center;
+}
+.login__button {
+  width: 120px;
+  background-color: #221ff6;
+}
+
+.username__validation {
+  color: white;
+}
+
+.password__validation {
+  color: white;
+}
+
+.valid {
+  color: yellowgreen;
+}
+
+.unvalid {
+  color: red;
+}
+
+.sign-up {
+  padding-top: 20px;
+}
+
+.sign-up__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up__button {
+  width: 120px;
+  background-color: #570ee8;
+}
