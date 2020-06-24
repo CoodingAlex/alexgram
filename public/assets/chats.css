@@ -24,3 +24,18 @@
   align-items: center;
   font-weight: bolder;
 }
+.add__icon {
+  width: 35px;
+}
+
+.add__icon__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.create__chat__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}

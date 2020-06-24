@@ -118,6 +118,38 @@ function chats(app) {
       next(err)
     }
   })
+
+  router.post('/', async (req, res, next) => {
+    if (!req.cookies.token) {
+      return res.redirect('/login')
+    }
+    try {
+      const { token } = req.cookies
+      const { name } = req.body
+
+      const { data } = await axios({
+        method: 'POST',
+        url: `${api}/api/chats`,
+        data: {
+          name,
+        },
+        headers: {
+          "Authorization": `Bearer ${token}` //prettier-ignore
+        },
+      })
+
+      res
+        .status(200)
+        .json({
+          message: 'Chat created',
+          data: { chat: data.chat, name: data.name },
+        })
+    } catch (err) {
+      console.log(err)
+
+      next(err)
+    }
+  })
 }
 
 module.exports = chats
