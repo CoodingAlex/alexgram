@@ -23,7 +23,7 @@
     "express": "^4.17.1",
     "handlebars": "^4.7.6",
     "jsonwebtoken": "^8.5.1",
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "passport": "^0.4.1",
     "passport-http": "^0.3.0",
